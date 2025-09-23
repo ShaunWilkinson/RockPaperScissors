@@ -62,26 +62,29 @@ function showResult() {
 
     console.log(indexes);
     
-    if(indexes[0] == indexes[1]){
-        result[0].style.backgroundColor = "#ffff00";
-        result[1].style.backgroundColor = "#ffff00";
-    }
-    else if (indexes[0] == 0 && indexes[1] == 1) {
-        result[1].style.backgroundColor = "#00ff00";
-    }
-    else if (indexes[0] == 0 && indexes[1] == 2) {
-        result[0].style.backgroundColor = "#00ff00";
-    }
-    else if (indexes[0] == 1 && indexes[1] == 0) {
-        result[0].style.backgroundColor = "#00ff00";
-    }
-    else if (indexes[0] == 1 && indexes[1] == 2) {
-        result[1].style.backgroundColor = "#00ff00";
-    }
-    else if (indexes[0] == 2 && indexes[1] == 0) {
-        result[1].style.backgroundColor = "#00ff00";
-    }
-    else if (indexes[0] == 2 && indexes[1] == 1) {
-        result[0].style.backgroundColor = "#00ff00";
-    }
+    setTimeout(() => {
+        if(indexes[0] == indexes[1]){
+            result[0].style.backgroundColor = "#ffff00";
+            result[1].style.backgroundColor = "#ffff00";
+        }
+        else if (indexes[0] == 0 && indexes[1] == 1) {
+            result[1].style.backgroundColor = "#00ff00";
+        }
+        else if (indexes[0] == 0 && indexes[1] == 2) {
+            result[0].style.backgroundColor = "#00ff00";
+        }
+        else if (indexes[0] == 1 && indexes[1] == 0) {
+            result[0].style.backgroundColor = "#00ff00";
+        }
+        else if (indexes[0] == 1 && indexes[1] == 2) {
+            result[1].style.backgroundColor = "#00ff00";
+        }
+        else if (indexes[0] == 2 && indexes[1] == 0) {
+            result[1].style.backgroundColor = "#00ff00";
+        }
+        else if (indexes[0] == 2 && indexes[1] == 1) {
+            result[0].style.backgroundColor = "#00ff00";
+        }
+    }, 1000);
+
 }
