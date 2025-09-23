@@ -88,3 +88,47 @@ function showResult() {
     }, 1000);
 
 }
+
+/**
+ * Playes a lot of rounds
+ */
+function runALot() {
+    let leftWon = 0;
+    let rightWon = 0;
+    let draw = 0;
+
+    for (let i = 0; i < 1000000; i++) {
+        let left = Math.floor(Math.random() * 3);
+        let right = Math.floor(Math.random() * 3);
+        
+        // 0 - rock
+        // 1 - paper
+        // 2 - scissors
+
+        if(left == right){
+            draw++;
+        }
+        else if (left == 0 && right == 1) {
+            rightWon++;
+        }
+        else if (left == 0 && right == 2) {
+            leftWon++;
+        }
+        else if (left == 1 && right == 0) {
+            leftWon++;
+        }
+        else if (left == 1 && right == 2) {
+            rightWon++;
+        }
+        else if (left == 2 && right == 0) {
+            rightWon++;
+        }
+        else if (left == 2 && right == 1) {
+            leftWon++;
+        }
+    }
+
+    console.log(`Left won ${leftWon}`);
+    console.log(`Right won ${rightWon}`);
+    console.log(`Draws ${draw}`);
+}
